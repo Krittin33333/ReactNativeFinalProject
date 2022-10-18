@@ -11,6 +11,12 @@ import {
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import DetailScreen from "./screens/DetailScreen";
+import LoginScreen from "./screens/LoginScreen";
+import RulesScreen from "./screens/RulesScreen";
+import RoleScreen from "./screens/RoleScreen";
+import SkillScreen from "./screens/SkillScreen";
+import BookmarkScreen from "./screens/SkillScreen";
+import SettingSrceen from "./screens/SettingSrceen";
 
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -68,7 +74,9 @@ function ProductStack(){
       }}
       >
       <Stack.Screen name='Product' component={ProductScreen}/>
-      <Stack.Screen name='Detail' component={DetailScreen}/>
+      {/* <Stack.Screen name='Detail' component={DetailScreen}/> */}
+      <Stack.Screen name='Login' component={LoginScreen}/>
+      <Stack.Screen name='Rules' component={RulesScreen}/>
 
       
     </Stack.Navigator>
@@ -111,9 +119,16 @@ function MyDrawer() {
         },
       }}
     >
+      <Drawer.Screen name="Login" component={LoginScreen} />
       <Drawer.Screen name="Home" component={HomeScreen} />
       {/* <Drawer.Screen name="Article" component={ArticleScreen} /> */}
-      <Drawer.Screen name="Detail" component={ProductStack} />
+      {/* <Drawer.Screen name="Detail" component={ProductStack} /> */}
+      <Drawer.Screen name="Rules" component={RulesScreen} />
+      <Drawer.Screen name="Role & Position" component={RoleScreen} />
+      <Drawer.Screen name="Skill Move" component={SkillScreen} />
+      <Drawer.Screen name="Bookmark" component={BookmarkScreen} />
+      <Drawer.Screen name="Setting" component={SettingSrceen} />
+      
     </Drawer.Navigator>
   );
 }
@@ -121,7 +136,7 @@ function MyDrawer() {
 export default function App() {
   return (
     <NavigationContainer theme={MyTheme}>
-      <MyDrawer />
+      <MyDrawer/>
     </NavigationContainer>
   );
 }
