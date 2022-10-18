@@ -21,7 +21,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack'
 //     <View style = {{flex:1 ,justifyContent:'center',alignItems:'center'}}>
 //       <Text>AboutScreen</Text>
 //     </View>
-//   );
+// //   );
 // }
 
 

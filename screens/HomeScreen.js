@@ -1,4 +1,4 @@
-import { View, Text, Button } from "react-native";
+import { View, Text, Button ,ImageBackground,StyleSheet} from "react-native";
 import React from "react";
 import {Ionicons,FontAwesome} from "@expo/vector-icons";
 
@@ -13,6 +13,8 @@ import {
 const IoniconsHeaderButton = (props) => (
   <HeaderButton IconComponent={Ionicons} iconSize={23} {...props} />
 );
+
+
 
 const HomeScreen = ({ navigation }) => {
 
@@ -30,23 +32,44 @@ const HomeScreen = ({ navigation }) => {
   }, [navigation]);
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <FontAwesome name="home" size={30} color="#42AC42" />
-      <Text>HomeScreen</Text>
 
-      <Button
-        color="#3D8CDA"
-        title="open Drawer"
-        onPress={() => navigation.openDrawer()}
-        //  onPress={()=>navigation.navigate('About',{
-        //     email:'reactnative.tni.ac.th'
+    <View style={{ flex: 1}}>
+      <ImageBackground source={require('../assets/Haaland4.JPEG')} resizeMode="cover" style={styles.image}>
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+          <FontAwesome name="home" size={30} color="#42AC42" />
+          <Text>HomeScreen</Text>
 
-        //  })}
-      />
+          <Button
+            color="#3D8CDA"
+            title="open Drawer"
+            onPress={() => navigation.openDrawer()}
+            //  onPress={()=>navigation.navigate('About',{
+            //     email:'reactnative.tni.ac.th'
 
-    
+            //  })}
+          />
+        </View>
+    </ImageBackground>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center"
+  },
+  text: {
+    color: "white",
+    fontSize: 42,
+    lineHeight: 84,
+    fontWeight: "bold",
+    textAlign: "center",
+    backgroundColor: "#000000c0"
+  }
+});
 
 export default HomeScreen;

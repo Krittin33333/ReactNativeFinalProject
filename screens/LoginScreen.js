@@ -1,22 +1,26 @@
-import { StyleSheet, Text, View ,Button,TextInput ,TouchableOpacity} from 'react-native'
+import { StyleSheet, Text, View ,Button,TextInput ,TouchableOpacity,Image} from 'react-native'
 import React from 'react'
 
 const LoginScreen = ({ navigation }) => {
   return (
    <>
     <View style ={styles.container}>
-      <Text style = {styles.heading}>Thai-Nichi institute of Technology</Text>
-      <Text style = {styles.textStyle}>Please insert your name to pass it to second screen</Text>
+    <View style ={{padding:30}}></View>
+    <Image
+          source={require('C:/ReactNativeFinalProject/assets/react_logo.png')}
+          style={styles.sideMenuProfileIcon}
+        />
+        <View style ={{padding:30}}></View>
          <TextInput
-            placeholder='Your name'
-            style={{  width:200, padding: 10,margin:10, backgroundColor: '#DEDEDE' }}
+            placeholder='Username'
+            style={{  width:250, padding: 10,margin:10, backgroundColor: '#DEDEDE' }}
            />
 
           <TextInput
-            placeholder='Your name'
-            style={{  width:200, padding: 10,margin:10, backgroundColor: '#DEDEDE' }}
+            placeholder='Password'
+            style={{  width:250, padding: 10,margin:10, backgroundColor: '#DEDEDE' }}
            />
-     
+     <View style ={{padding:30}}></View>
       <Button
       title='             Login             '
       color={'#B5E67C'}
@@ -57,5 +61,13 @@ const styles = StyleSheet.create({
         color: 'red',
        
           
-      }
+      },
+      sideMenuProfileIcon: {
+        resizeMode: "center",
+        width: 100,
+        height: 100,
+        borderRadius: 100 / 2,
+        alignSelf: "center",
+      },
+      
 });

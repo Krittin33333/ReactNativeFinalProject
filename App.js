@@ -35,28 +35,11 @@ const MyTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: "rgb(255,45,85)",
-    background: "rgb(229, 255, 234 )",
+    primary: "rgb(26,45,85)",
+    background: "#F2F2F2",
+   
   },
 };
-
-// function FeedScreen({ navigation }) {
-//   return (
-//     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-//       <Text>Feed Screen</Text>
-//       <Button title="open drawer" onPress={() => navigation.openDrawer()} />
-//       <Button title="Toggle drawer" onPress={() => navigation.toggleDrawer()} />
-//     </View>
-//   );
-// }
-
-// function NotificationScreen() {
-//   return (
-//     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-//       <Text>Notification Screen</Text>
-//     </View>
-//   );
-// }
 
 const Stack = createNativeStackNavigator();
 
@@ -64,8 +47,8 @@ function ProductStack(){
   return(
       <Stack.Navigator 
       screenOptions = {{
-        headerStyle:{
-            backgroundColor:'#0096da'
+        headerStyle: {
+          backgroundColor: "#FFD66D",
         },
         headerTintColor:'#ffffff',
         headerTitleStyle:{
@@ -87,12 +70,12 @@ function ProductStack(){
 function CustomDrawerContent(Props) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      
+      <View style ={{padding:30}}></View>
         <Image
           source={require('C:/ReactNativeFinalProject/assets/react_logo.png')}
           style={styles.sideMenuProfileIcon}
         />
-      
+      <View style ={{padding:30}}></View>
 
       <DrawerContentScrollView {...Props}>
         <DrawerItemList {...Props} />
@@ -115,8 +98,11 @@ function MyDrawer() {
       drawerContent={(Props) => <CustomDrawerContent {...Props} />}
       screenOptions={{
         drawerStyle: {
-          width: 240,
+          width: 300,
         },
+        headerStyle:{backgroundColor:'#FFD66D'},
+        headerTintColor:'#fff',
+        headerTitleStyle:{fontWeight:'bold'}
       }}
     >
       <Drawer.Screen name="Login" component={LoginScreen} />
