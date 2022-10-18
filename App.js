@@ -70,12 +70,12 @@ function ProductStack(){
 function CustomDrawerContent(Props) {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style ={{padding:30}}></View>
+      <View style ={{padding:15}}></View>
         <Image
-          source={require('C:/ReactNativeFinalProject/assets/react_logo.png')}
+          source={require('C:/ReactNativeFinalProject/assets/FIFA_Flag_blue.png')}
           style={styles.sideMenuProfileIcon}
         />
-      <View style ={{padding:30}}></View>
+      <View style ={{padding:15}}></View>
 
       <DrawerContentScrollView {...Props}>
         <DrawerItemList {...Props} />
@@ -136,8 +136,8 @@ const styles = StyleSheet.create({
   },
   sideMenuProfileIcon: {
     resizeMode: "center",
-    width: 100,
-    height: 100,
+    width: 250,
+    height: 200,
     borderRadius: 100 / 2,
     alignSelf: "center",
   },
