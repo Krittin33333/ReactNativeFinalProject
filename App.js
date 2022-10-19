@@ -84,17 +84,65 @@ function MyDrawer() {
         headerTitleStyle:{fontWeight:'bold'}
       }}
     >
-      <Drawer.Screen name="Login" component={LoginScreen} 
-      options={{
-        drawerIcon: 
-        <Image />
+      <Drawer.Screen name="Login" component={LoginScreen} />
+      <Drawer.Screen name="Home" component={HomeScreen} options={{
+        drawerIcon:  ({color}) =>(
+        <Image source={require('C:/ReactNativeFinalProject/assets/Home.png')}
+        style={{
+        width: 30,
+        height: 30,
+        }}/>
+        )
       }}/>
-      <Drawer.Screen name="Home" component={HomeScreen} />
-      <Drawer.Screen name="Rules" component={RulesScreen} />
-      <Drawer.Screen name="Role & Position" component={RoleScreen} />
-      <Drawer.Screen name="Skill Move" component={SkillScreen} />
-      <Drawer.Screen name="Bookmark" component={BookmarkScreen} />
-      <Drawer.Screen name="Setting" component={SettingSrceen} />
+      <Drawer.Screen name="Rules" component={RulesScreen} options={{
+        drawerIcon:  ({color}) =>(
+        <Image source={require('C:/ReactNativeFinalProject/assets/Rules.png')}
+        style={{
+        width: 30,
+        height: 30,
+        }}/>
+        )
+      }}/>
+      <Drawer.Screen name="Role & Position" component={RoleScreen} 
+      options={{
+        drawerIcon:  ({color}) =>(
+        <Image source={require('C:/ReactNativeFinalProject/assets/Role.png')}
+        style={{
+        width: 30,
+        height: 30,
+        }}/>
+        )
+      }}/>
+      <Drawer.Screen name="Skill Move" component={SkillScreen} 
+      options={{
+        drawerIcon:  ({color}) =>(
+        <Image source={require('C:/ReactNativeFinalProject/assets/Skill.png')}
+        style={{
+        width: 30,
+        height: 30,
+        }}/>
+        )
+      }}/>
+      <Drawer.Screen name="Bookmark" component={BookmarkScreen} 
+      options={{
+        drawerIcon:  ({color}) =>(
+        <Image source={require('C:/ReactNativeFinalProject/assets/Bookmark.png')}
+        style={{
+        width: 30,
+        height: 30,
+        }}/>
+        )
+      }}/>
+      <Drawer.Screen name="Setting" component={SettingSrceen} 
+      options={{
+        drawerIcon:  ({color}) =>(
+        <Image source={require('C:/ReactNativeFinalProject/assets/Setting.png')}
+        style={{
+        width: 30,
+        height: 30,
+        }}/>
+        )
+      }}/>
       
     </Drawer.Navigator>
   );
