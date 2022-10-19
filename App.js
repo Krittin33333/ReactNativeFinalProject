@@ -15,7 +15,7 @@ import LoginScreen from "./screens/LoginScreen";
 import RulesScreen from "./screens/RulesScreen";
 import RoleScreen from "./screens/RoleScreen";
 import SkillScreen from "./screens/SkillScreen";
-import BookmarkScreen from "./screens/SkillScreen";
+import BookmarkScreen from "./screens/BookmarkScreen";
 import SettingSrceen from "./screens/SettingSrceen";
 
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
@@ -37,35 +37,12 @@ const MyTheme = {
     ...DefaultTheme.colors,
     primary: "rgb(26,45,85)",
     background: "#F2F2F2",
+    
    
   },
 };
 
 const Stack = createNativeStackNavigator();
-
-function ProductStack(){
-  return(
-      <Stack.Navigator 
-      screenOptions = {{
-        headerStyle: {
-          backgroundColor: "#FFD66D",
-        },
-        headerTintColor:'#ffffff',
-        headerTitleStyle:{
-          fontWeigth:'bold'
-        }
-      }}
-      >
-      <Stack.Screen name='Product' component={ProductScreen}/>
-      {/* <Stack.Screen name='Detail' component={DetailScreen}/> */}
-      <Stack.Screen name='Login' component={LoginScreen}/>
-      <Stack.Screen name='Rules' component={RulesScreen}/>
-
-      
-    </Stack.Navigator>
-
-  )
-}
 
 function CustomDrawerContent(Props) {
   return (
@@ -99,16 +76,20 @@ function MyDrawer() {
       screenOptions={{
         drawerStyle: {
           width: 300,
+          alignItems : 'center',
+          
         },
         headerStyle:{backgroundColor:'#FFD66D'},
         headerTintColor:'#fff',
         headerTitleStyle:{fontWeight:'bold'}
       }}
     >
-      <Drawer.Screen name="Login" component={LoginScreen} />
+      <Drawer.Screen name="Login" component={LoginScreen} 
+      options={{
+        drawerIcon: 
+        <Image />
+      }}/>
       <Drawer.Screen name="Home" component={HomeScreen} />
-      {/* <Drawer.Screen name="Article" component={ArticleScreen} /> */}
-      {/* <Drawer.Screen name="Detail" component={ProductStack} /> */}
       <Drawer.Screen name="Rules" component={RulesScreen} />
       <Drawer.Screen name="Role & Position" component={RoleScreen} />
       <Drawer.Screen name="Skill Move" component={SkillScreen} />
