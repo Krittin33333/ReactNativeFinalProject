@@ -209,43 +209,43 @@ const styles = StyleSheet.create({
     borderRadius: 100 / 2,
     alignSelf: "center",
   },
-  container2: {
-    flex: 1,
-    alignItems: 'center',
-    padding: 20,
-    },
-heading: {
-    fontSize: 25,
-    textAlign: 'center',
-    marginVertical: 10,
-    },
-textStyle: {
-    textAlign: 'center',
-    fontSize: 16,
-    marginVertical: 10,
-    },
-buttonstyle: {
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: 'red',         
-    },
-    sideMenuProfileIcon: {
-      resizeMode: "center",
-      width: 300,
-      height: 250,
-      borderRadius: 100 / 2,
-      alignSelf: "center",
-    },
-image: {
-      flex: 1,
-      justifyContent: "center"
-    },
-textbox : {
-  width:275, 
-  padding: 10,
-  margin:10, 
-  backgroundColor: '#DEDEDE' ,
-  borderRadius:5 
-},
+//   container2: {
+//     flex: 1,
+//     alignItems: 'center',
+//     padding: 20,
+//     },
+// heading: {
+//     fontSize: 25,
+//     textAlign: 'center',
+//     marginVertical: 10,
+//     },
+// textStyle: {
+//     textAlign: 'center',
+//     fontSize: 16,
+//     marginVertical: 10,
+//     },
+// buttonstyle: {
+//       alignItems: 'center',
+//       justifyContent: 'center',
+//       color: 'red',         
+//     },
+//     sideMenuProfileIcon: {
+//       resizeMode: "center",
+//       width: 300,
+//       height: 250,
+//       borderRadius: 100 / 2,
+//       alignSelf: "center",
+//     },
+// image: {
+//       flex: 1,
+//       justifyContent: "center"
+//     },
+// textbox : {
+//   width:275, 
+//   padding: 10,
+//   margin:10, 
+//   backgroundColor: '#DEDEDE' ,
+//   borderRadius:5 
+// },
   
 });
