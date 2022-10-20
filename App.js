@@ -6,11 +6,10 @@ import {
   TextInput,
   Image,
   SafeAreaView,
+  ImageBackground
 } from "react-native";
 
 import HomeScreen from "./screens/HomeScreen";
-import ProductScreen from "./screens/ProductScreen";
-import DetailScreen from "./screens/DetailScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RulesScreen from "./screens/RulesScreen";
 import RoleScreen from "./screens/RoleScreen";
@@ -28,6 +27,7 @@ import {
   DrawerItemList,
 } from "@react-navigation/drawer";
 import React from "react";
+import { Alert } from "react-native";
 
 
 
@@ -41,8 +41,6 @@ const MyTheme = {
    
   },
 };
-
-const Stack = createNativeStackNavigator();
 
 function CustomDrawerContent(Props) {
   return (
@@ -67,9 +65,11 @@ function CustomDrawerContent(Props) {
 }
 
 const Drawer = createDrawerNavigator();
+const Stack = createNativeStackNavigator();
 
 function MyDrawer() {
   return (
+    
     <Drawer.Navigator
       useLegacyImplementation
       drawerContent={(Props) => <CustomDrawerContent {...Props} />}
@@ -84,7 +84,7 @@ function MyDrawer() {
         headerTitleStyle:{fontWeight:'bold'}
       }}
     >
-      <Drawer.Screen name="Login" component={LoginScreen} />
+      {/* <Drawer.Screen name="Login" component={LoginScreen} /> */}
       <Drawer.Screen name="Home" component={HomeScreen} options={{
         drawerIcon:  ({color}) =>(
         <Image source={require('C:/ReactNativeFinalProject/assets/Home.png')}
@@ -148,9 +148,48 @@ function MyDrawer() {
   );
 }
 
+// function MyLogin() {
+//   return (
+//     <>
+//     <View style={{ flex: 1}}>
+//       <ImageBackground source={require('C:/ReactNativeFinalProject/assets/LoginBG.png')} resizeMode="cover" style={styles.image}>
+//         <View style ={styles.container2}>
+//           <Image
+//                 source={require('C:/ReactNativeFinalProject/assets/FIFA_Flag_White.png')}
+//                 style={styles.sideMenuProfileIcon}
+//               />
+            
+//               <TextInput
+//                   placeholder='Username'
+//                   style={styles.textbox}
+//                 />
+
+//                 <TextInput
+//                   placeholder='Password'
+//                   style={styles.textbox}
+//                 />
+//           <View style ={{padding:30}}></View>
+//             <Button
+//                 title='             Login             '
+//                 color={'#B5E67C'}
+//                 fontSize={20}
+//                 style={styles.buttonstyle}
+//                 onPress={() => {
+                  
+                    
+//                 }}
+//                 />
+//           </View>
+//         </ImageBackground>
+//       </View>
+//     </> 
+//   )
+// }
+
 export default function App() {
   return (
     <NavigationContainer theme={MyTheme}>
+      {/* <MyLogin/> */}
       <MyDrawer/>
     </NavigationContainer>
   );
@@ -170,4 +209,43 @@ const styles = StyleSheet.create({
     borderRadius: 100 / 2,
     alignSelf: "center",
   },
+  container2: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 20,
+    },
+heading: {
+    fontSize: 25,
+    textAlign: 'center',
+    marginVertical: 10,
+    },
+textStyle: {
+    textAlign: 'center',
+    fontSize: 16,
+    marginVertical: 10,
+    },
+buttonstyle: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: 'red',         
+    },
+    sideMenuProfileIcon: {
+      resizeMode: "center",
+      width: 300,
+      height: 250,
+      borderRadius: 100 / 2,
+      alignSelf: "center",
+    },
+image: {
+      flex: 1,
+      justifyContent: "center"
+    },
+textbox : {
+  width:275, 
+  padding: 10,
+  margin:10, 
+  backgroundColor: '#DEDEDE' ,
+  borderRadius:5 
+},
+  
 });

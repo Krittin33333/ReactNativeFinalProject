@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View ,Button,TextInput ,TouchableOpacity,Image,ImageBackground} from 'react-native'
+
 import React from 'react'
 
 const LoginScreen = ({ navigation }) => {
@@ -6,7 +7,7 @@ const LoginScreen = ({ navigation }) => {
    <>
     <View style={{ flex: 1}}>
       <ImageBackground source={require('../assets/LoginBG.png')} resizeMode="cover" style={styles.image}>
-        <View style ={styles.container}>
+        <View style ={styles.container2}>
           <Image
                 source={require('C:/ReactNativeFinalProject/assets/FIFA_Flag_White.png')}
                 style={styles.sideMenuProfileIcon}
@@ -28,8 +29,8 @@ const LoginScreen = ({ navigation }) => {
                 fontSize={20}
                 style={styles.buttonstyle}
                 onPress={() => {
-                    //Pass params back to HomeScreen funchion 5555555555555555
-                    navigation.navigate('Home')
+                    
+                    
                 }}
                 />
           </View>
@@ -43,7 +44,7 @@ const LoginScreen = ({ navigation }) => {
 export default LoginScreen
 
 const styles = StyleSheet.create({
-  container: {
+  container2: {
       flex: 1,
       alignItems: 'center',
       padding: 20,
