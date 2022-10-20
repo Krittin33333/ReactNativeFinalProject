@@ -37,7 +37,7 @@ const HomeScreen = ({ navigation }) => {
         <View style={{ flex: 1,  alignItems: "center" }}>
           <View style={{padding:30}}>
           <Image
-                  source={require('C:/ReactNativeFinalProject/assets/FIFA_Flag_White.png')}
+                  source={require('E:/reactPro/ReactNativeFinalProject/assets/FIFA_Flag_White.png')}
                   style={styles.sideMenuProfileIcon}
                 />
             <View style = {styles.textbox}>

@@ -9,7 +9,7 @@ const LoginScreen = ({ navigation }) => {
       <ImageBackground source={require('../assets/LoginBG.png')} resizeMode="cover" style={styles.image}>
         <View style ={styles.container2}>
           <Image
-                source={require('C:/ReactNativeFinalProject/assets/FIFA_Flag_White.png')}
+                source={require('E:/reactPro/ReactNativeFinalProject/assets/FIFA_Flag_White.png')}
                 style={styles.sideMenuProfileIcon}
               />
             

@@ -47,7 +47,7 @@ function CustomDrawerContent(Props) {
     <SafeAreaView style={{ flex: 1 }}>
       <View style ={{padding:15}}></View>
         <Image
-          source={require('C:/ReactNativeFinalProject/assets/FIFA_Flag_blue.png')}
+          source={require('E:/reactPro/ReactNativeFinalProject/assets/FIFA_Flag_blue.png')}
           style={styles.sideMenuProfileIcon}
         />
       <View style ={{padding:15}}></View>
@@ -87,7 +87,7 @@ function MyDrawer() {
       {/* <Drawer.Screen name="Login" component={LoginScreen} /> */}
       <Drawer.Screen name="Home" component={HomeScreen} options={{
         drawerIcon:  ({color}) =>(
-        <Image source={require('C:/ReactNativeFinalProject/assets/Home.png')}
+        <Image source={require('E:/reactPro/ReactNativeFinalProject/assets/Home.png')}
         style={{
         width: 30,
         height: 30,
@@ -96,7 +96,7 @@ function MyDrawer() {
       }}/>
       <Drawer.Screen name="Rules" component={RulesScreen} options={{
         drawerIcon:  ({color}) =>(
-        <Image source={require('C:/ReactNativeFinalProject/assets/Rules.png')}
+        <Image source={require('E:/reactPro/ReactNativeFinalProject/assets/Rules.png')}
         style={{
         width: 30,
         height: 30,
@@ -106,7 +106,7 @@ function MyDrawer() {
       <Drawer.Screen name="Role & Position" component={RoleScreen} 
       options={{
         drawerIcon:  ({color}) =>(
-        <Image source={require('C:/ReactNativeFinalProject/assets/Role.png')}
+        <Image source={require('E:/reactPro/ReactNativeFinalProject/assets/Role.png')}
         style={{
         width: 30,
         height: 30,
@@ -116,7 +116,7 @@ function MyDrawer() {
       <Drawer.Screen name="Skill Move" component={SkillScreen} 
       options={{
         drawerIcon:  ({color}) =>(
-        <Image source={require('C:/ReactNativeFinalProject/assets/Skill.png')}
+        <Image source={require('E:/reactPro/ReactNativeFinalProject/assets/Skill.png')}
         style={{
         width: 30,
         height: 30,
@@ -126,7 +126,7 @@ function MyDrawer() {
       <Drawer.Screen name="Bookmark" component={BookmarkScreen} 
       options={{
         drawerIcon:  ({color}) =>(
-        <Image source={require('C:/ReactNativeFinalProject/assets/Bookmark.png')}
+        <Image source={require('E:/reactPro/ReactNativeFinalProject/assets/Bookmark.png')}
         style={{
         width: 30,
         height: 30,
@@ -136,7 +136,7 @@ function MyDrawer() {
       <Drawer.Screen name="Setting" component={SettingSrceen} 
       options={{
         drawerIcon:  ({color}) =>(
-        <Image source={require('C:/ReactNativeFinalProject/assets/Setting.png')}
+        <Image source={require('E:/reactPro/ReactNativeFinalProject/assets/Setting.png')}
         style={{
         width: 30,
         height: 30,
