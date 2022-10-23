@@ -1,8 +1,22 @@
 import { StyleSheet, Text, View ,Button,TextInput ,TouchableOpacity,Image,ImageBackground} from 'react-native'
 
-import React from 'react'
+import React,{ useState } from 'react'
+
+
+
+
+
+
 
 const LoginScreen = ({ navigation }) => {
+
+const [username,setUsername] = useState('');
+const [password,setPassword] = useState('');
+var check = username;
+var check2 = password;
+(check === '' || check2 === '')
+?check = 'login'
+:check = 'Drawermain'
   return (
    <>
     <View style={{ flex: 1}}>
@@ -12,15 +26,18 @@ const LoginScreen = ({ navigation }) => {
                 source={require('E:/reactPro/ReactNativeFinalProject/assets/FIFA_Flag_White.png')}
                 style={styles.sideMenuProfileIcon}
               />
-            
+           
               <TextInput
                   placeholder='Username'
                   style={styles.textbox}
+                  onChangeText={(val) => setUsername(val)}
                 />
 
                 <TextInput
+                keyboardType='numeric'
                   placeholder='Password'
                   style={styles.textbox}
+                  onChangeText={(val) => setPassword(val)}
                 />
           <View style ={{padding:30}}></View>
             <Button
@@ -29,10 +46,11 @@ const LoginScreen = ({ navigation }) => {
                 fontSize={20}
                 style={styles.buttonstyle}
                 onPress={() => {
-                    
+                  navigation.navigate(check)
                     
                 }}
                 />
+                
           </View>
         </ImageBackground>
       </View>

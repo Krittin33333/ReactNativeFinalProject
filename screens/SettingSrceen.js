@@ -1,5 +1,13 @@
 import { StyleSheet, Text, View ,Button,TextInput ,TouchableOpacity,Image,ImageBackground} from 'react-native'
+
+
+
 import React from 'react'
+
+
+
+
+
 
 const SettingSrceen = () => {
   return (
@@ -29,13 +37,15 @@ const SettingSrceen = () => {
                 style={styles.buttonstyle}
                 onPress={() => {
                     //Pass params back to HomeScreen funchion 5555555555555555
-                    navigation.navigate('Home')
+                   // navigation.navigate('Skill Move')
                 }}
                 />
           </View>
         </ImageBackground>
       </View>
     </> 
+
+    
   )
 }
 
