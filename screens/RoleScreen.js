@@ -16,9 +16,32 @@ const RoleScreen = ({ navigation }) => {
                 style={styles.sideMenuProfileIcon}
             />
 
-            <Text style = {styles.text}>introduction</Text>
-            <Text >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
-            <Text >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
+            <Text style = {styles.text}>ตำแหน่งผู้เล่น</Text>
+            <Text > ใน เกมฟุตบอล,ผู้เล่นทุกคนจะมีตำแหน่งที่เหมาะสมกับตัวเอง คนที่มีความรู้เรื่องฟุตบอลนั้นจะรู้ตำแหน่ง เช่น ST, CM, หรือCB แต่บางคนอาจจะไม่มีความรู้เรื่องฟุตบอลมาก่อน นั้นคือเหตุผลที่เราต้องรู้จักตำแหน่งต่างๆก่อน</Text>
+            <Text > ในเกมสมัยใหม่ ตำแหน่งในฟุตบอลได้กำหนดไว้อย่างเคร่งครัดเหมือนรักบี้หรืออเมริกันฟุตบอล ถึงอย่างนั้นนักเตะส่วนใหญ่มักเล่นในตำแหน่งเดิมตลอดการค้าแข้งของพวกเขา เพราะในแต่ล่ะตำแหน่งนั้นใช้ทักษะและความสามารถทางร่างกายไม่เหมือนกัน แต่ก็มีนักฟุตบอลบางพวกที่เล่นได้หลายตำแหน่ง ซึ่งถึงเรียกว่า "นักเตะสารพัดประโยชน์"</Text>
+           
+            <Image
+                source={require('E:/reactPro/ReactNativeFinalProject/assets/plan.png')}
+                style={styles.sideMenuProfileIcon}
+            />
+            <View style = {{flexDirection: "row",justifyContent: 'space-between',marginTop:20}}>
+                  <Button
+                    title='  Back  '
+                    color={'#B5E67C'}
+                    fontSize={20}
+                    onPress={() => {
+                      navigation.goBack()
+                    }}
+                    />
+                  <Button
+                    title='  Next  '
+                    color={'#B5E67C'}
+                    fontSize={20}
+                    onPress={() => {
+                      navigation.navigate('fw')
+                    }}
+                    />
+                </View>
           </View>
         </View>      
       </View>
@@ -44,6 +67,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
     textAlign: "center",
+    
     
   },
   sideMenuProfileIcon: {

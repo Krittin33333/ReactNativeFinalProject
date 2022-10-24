@@ -41,8 +41,11 @@ const HomeScreen = ({ navigation }) => {
                   style={styles.sideMenuProfileIcon}
                 />
             <View style = {styles.textbox}>
-              <Text style = {styles.text}>introduction</Text>
-              <Text >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
+              <Text style = {styles.text}>Football Guide</Text>
+              <Text >  ฟุตบอลหรือซอกเกอร์ เป็นกีฬาประเภททีมที่เล่นระหว่างสองทีมโดยแต่ละทีมมีผู้เล่น11คน โดยใช้ลูกบอล เป็นที่ยอมรับ อย่างแพร่หลายว่าเป็นกีฬาที่เป็นที่นิยมมากที่สุดในโลก </Text>
+              <Text>
+                 โดยจะเล่นในสนามหญ้าสี่เหลี่ยมผืนผ้า หรือ สนามหญ้าเทียม โดยมีประตูอยู่กึ่งกลางที่ปลายสนามทั้งสองฝั่ง เป้าหมายคือ ทำคะแนนโดยพาลูกฟุตบอลให้เข้าไปยังประตูของฝ่ายตรงข้าม ในการเล่นทั่วไปผู้รักษาประตูจะเป็นผู้เล่นเพียงคนเดียวที่สามารถ ใช้มือหรือแขนกับลูกฟุตบอลได้ ส่วนผู้เล่นอื่นๆจะใช้เท้าในการเตะลูกฟุตบอลไปยังตำแหน่งที่ต้องการ บางครั้งอาจใช้ลำตัว หรือ ศีรษะ เพื่อสกัดลูกฟุตบอลที่ลอยอยู่กลางอากาศ โดยทีมที่พาลูกฟุตบอลเข้าประตูฝ่ายตรงข้ามได้มากกว่าจะเป็นผู้ชนะ ถ้าคะแนนเท่ากัน ให้ถือว่าเสมอ แต่ในบางเกมที่เสมอกันในช่วงเวลาปกติแล้วต้องการหาผู้ชนะจึงต้องมีการต่อเวลาพิเศษ และ/หรือยิงลูกโทษขึ้นอยู่กับ กฎระเบียบของรายการแข่งขันนั้นๆ
+              </Text>
             </View>
           </View>      
         </View>

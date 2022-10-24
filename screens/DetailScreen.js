@@ -4,10 +4,17 @@ import {
   View,
   ActivityIndicator,
   FlatList,
+  Image,
+  SafeAreaView,
+  ScrollView,
+  Button
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { useFocusEffect } from "@react-navigation/native";
 import axios from "axios";
+
+
+
 
 const DetailScreen = ({ navigation, route }) => {
   const { id, title } = route.params;
@@ -19,17 +26,18 @@ const DetailScreen = ({ navigation, route }) => {
     navigation.setOptions({
       title: title,
     });
-  }, [navigation, title]);
+  }, [navigation, title]
+  );
 
   const getData = async (id) => {
     try {
       setloading(true);
       const res = await axios.get(
-        "https://api.codingthailand.com/api/course/" + id
+        "https://my-football-api.krittinkamkar.repl.co/N" + id
       );
-      console.log(res.data.data);
+      console.log(res.data);
       // alert(JSON.stringify(res.data.data))
-      setdetail(res.data.data);
+      setdetail(res.data);
       setloading(false);
     } catch (error) {
       setloading(false);
@@ -68,23 +76,41 @@ const DetailScreen = ({ navigation, route }) => {
     getData(id);
   };
 
-  const _rederitem = ({ item ,index }) => {
-    let picture =
-      item.picture !== null ? item.picture : "https://via.placeholder.com/150";
+  const _rederitem = ({ item  }) => {
     return (
+      <SafeAreaView style={{ flex: 1 }}>
 
-          <View style={{ flex: 1 }}>
-            <View style={{ flex: 1 ,flexDirection:'row',margin:5}}>
-            <Text style={styles.thumbnail}>{index+1}</Text>
-              <View style={styles.dataContainer}>
-                <View style={styles.dataContent}>
-                  <Text style={styles.title}>{item.ch_title}</Text>
-                  <Text note numberOfLines={1}>{item.ch_dateadd}</Text>
-                </View>
-              </View>
+            <View style={{ flex: 1 ,margin:10,justifyContent:'center',alignItems:'center'}}>
+            <Text style={styles.title}>{item.title}</Text>
+
+            <Image
+              resizeMode="cover"
+              source={{ uri: item.picture }}
+              style={styles.thumbnail}
+            />
             </View>
-          </View>
-   
+            
+            <View style={{ flex: 1 ,margin:10}}>
+             
+                <View style={styles.dataContent}>
+                  <Text style={styles.detail}>{item.detail}</Text>
+                </View>
+                <View style={styles.dataContent}>
+                  <Text style={styles.content}>{item.content}</Text>
+                  <Text style={{marginTop:10}}>{item.date}</Text>
+                </View>
+                <Button
+                title=' BACK'
+                color={'#B5E67C'}
+                fontSize={20}
+                style={styles.buttonstyle}
+                onPress={() => {
+                  navigation.goBack()
+                }}
+                />
+
+            </View>
+   </SafeAreaView>
     );
   };
 
@@ -94,7 +120,7 @@ const DetailScreen = ({ navigation, route }) => {
       <View>
         <FlatList
           data={detail}
-          keyExtractor={(item, index) => item.ch_id.toString()}
+          keyExtractor={(item, index) => item.id.toString()}
           renderItem={_rederitem}
           refreshing={loading}
           onRefresh={_onReflesh}
@@ -112,7 +138,6 @@ const styles = StyleSheet.create({
     elevation: 3,
     borderColor: "gray",
     borderRadius: 5,
-    flexDirection: "row",
     marginHorizontal: 20,
   },
 
@@ -120,25 +145,32 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   thumbnail: {
-    width: 70,
-    height: 70,
+    width: 350,
+    height: 320,
   },
   dataContent: {
-    marginTop: 5,
-    marginLeft: 15,
+    margin: 15,
   },
 
   title: {
     color: "#444",
     fontSize: 18,
     fontWeight: "bold",
+    marginBottom: 10,
   },
 
   detail: {
+    fontSize: 18,
+    color: "#888",
+    fontWeight: "bold",
+  },
+  content: {
     fontSize: 16,
     color: "#888",
     fontWeight: "700",
+    marginTop: 10,
   },
+  
   addButtonStyle: {
     width: "100%",
 

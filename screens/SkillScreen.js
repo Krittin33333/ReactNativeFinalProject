@@ -1,7 +1,7 @@
 import { View, Text, Button ,ImageBackground,StyleSheet,Image,ScrollView,SafeAreaView} from "react-native";
 import React from "react";
 
-const SkillScreen = () => {
+const SkillScreen = ({ navigation }) => {
   return (
     <SafeAreaView>
     <ScrollView>
@@ -16,10 +16,33 @@ const SkillScreen = () => {
                 style={styles.sideMenuProfileIcon}
             />
 
-            <Text style = {styles.text}>introduction</Text>
-            <Text >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
-            <Text >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</Text>
+            <Text style = {styles.text}>เทคนิคฟุตบอล</Text>
+            <Text style = {styles.textData}>การเลี้ยงฟุตบอลถือได้ว่าเป็นหนึ่งในทักษะที่สำคัญมากในการเล่นกีฬาฟุตบอล และเป็นสิ่งที่นักฟุตบอลทุกคนจำเป็นจะต้องฝึกฝนเอาไว้ให้ชำนาญเพราะ ถึงคุณจะเก่งอะไรแค่ไหน แต่ไม่สามารถเลี้ยงฟุตบอลผ่านคู่ต่อสู้ไปได้เลยคุณก็จะกลายเป็นจุดอ่อนของทีมไปโดยทันที ดังนั้นเรามาดูกันครับว่าการเลี้ยงฟุตบอลหลบคู่ต่อสู้นั้นมีอะไรและทำอย่างไรบ้าง</Text>
+            <Image
+                source={require('E:/reactPro/ReactNativeFinalProject/assets/skill.jpg')}
+                style={styles.sideMenuProfileIcon}
+            />
+            
+            <View style = {{flexDirection: "row",justifyContent: 'space-between',marginTop:20}}>
+                  <Button
+                    title='  Back  '
+                    color={'#B5E67C'}
+                    fontSize={20}
+                    onPress={() => {
+                        navigation.goBack()
+                    }}
+                    />
+                  <Button
+                    title='  Next  '
+                    color={'#B5E67C'}
+                    fontSize={20}
+                    onPress={() => {
+                        navigation.navigate('rollover')
+                    }}
+                    />
+                </View>
           </View>
+          
         </View>      
       </View>
     </ImageBackground>
@@ -46,6 +69,17 @@ const styles = StyleSheet.create({
     textAlign: "center",
     
   },
+  textData:{
+    color: "#111111",
+    fontWeight: "bold",
+    
+  },
+  textheadData:{
+    color: "#111111",
+    fontWeight: "bold",
+    fontSize: 22,
+    
+  },
   sideMenuProfileIcon: {
     resizeMode: "center",
     width: 300,
@@ -59,4 +93,5 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(240,240,240,0.6)" ,
     borderRadius:30
   },
+ 
 })
