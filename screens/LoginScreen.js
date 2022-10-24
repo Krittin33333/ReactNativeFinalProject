@@ -34,8 +34,10 @@ var check2 = password;
                 />
 
                 <TextInput
-                  keyboardType='numeric'
+                  
                   placeholder='Password'
+                  secureTextEntry
+                  autoCorrect={false}
                   style={styles.textbox}
                   onChangeText={(val) => setPassword(val)}
                 />
