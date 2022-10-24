@@ -1,7 +1,7 @@
-import {  View, Text, Button ,ImageBackground,StyleSheet,Image,ScrollView,SafeAreaView} from 'react-native'
+import {View, Text, Button ,ImageBackground,StyleSheet,Image,ScrollView,SafeAreaView } from 'react-native'
 import React from 'react'
 
-const Scissor = ({navigation}) => {
+const NutMeg = ({navigation}) => {
   return (
     <SafeAreaView>
     <ScrollView>
@@ -13,13 +13,13 @@ const Scissor = ({navigation}) => {
           <View style = {styles.textbox}>
            
 
-              <Text style = {styles.text}>Step Over</Text>
+              <Text style = {styles.text}>Nut meg</Text>
             <Image
-                source={require('E:/reactPro/ReactNativeFinalProject/assets/stepover.jpg')}
+                source={require('E:/reactPro/ReactNativeFinalProject/assets/nutmeg.jpg')}
                 style={styles.sideMenuProfileIcon}
             />
-            <Text style = {styles.textheadData}>สับขาหลอก (step over, scissor)</Text>
-            <Text style = {styles.textData}>    การสับขาหลอกเป็นเทคนิคการเลี้ยงบอลหลบที่ใช้กันอย่างแพร่หลายมาก นักเตะหลายคนก็นิยมท่านี้มาก วิธีการทำนั่นคือเมื่อเลี้ยงบอลเข้าจู่โจมฝ่ายตรงข้ามแล้ว ทำให้การสับขาหลอกด้วยการ ก้าวข้ามบอลเป็นวงกลมสลับไปสลับมา โดยใช้ขาทั้ง 2 ข้าง หรือจะใช้ข้างเดียวก็ได้ เพื่อหลอกให้ฝ่ายตรงข้ามเสียจังหวะ ก่อนที่จะกระชากบอลไปในทิศทางที่เหมาะสมเพื่อหลบคู่ต่อสู้</Text>
+            <Text style = {styles.textheadData}>เตะบอลรอดหว่างขา (Nut meg, Panna)</Text>
+            <Text style = {styles.textData}>การเตะลอดหว่างขอก็จัดได้ว่าเป็นหนึ่งในเทคนิคเลี้ยงบอลนะครับ โดยอาศัยจังหวะที่คู่ต่อสู้พยายามจะแย่งบอลแล้วมีช่องว่างใต้หว่างขามากพอก็ให้ทำการเตะบอลลอดหว่างขอทันที ส่วนตัวเราก็วิ่งอ้อมตัวคู่ต่อสู้ไปเพื่อเก็บบอล การเลี้ยงแบบนี้อาจจะใช้ยากซักหน่อยเพราะจังหวะมีไม่มากนัก แต่ถ้าได้จังหวะแล้วล่ะก็เป็นท่าที่มีประโยชน์มากเลยล่ะ</Text>
             <View style = {{flexDirection: "row",justifyContent: 'space-between',marginTop:20}}>
                   <Button
                     title='  Back  '
@@ -29,14 +29,7 @@ const Scissor = ({navigation}) => {
                         navigation.goBack()
                     }}
                     />
-                  <Button
-                    title='  Next  '
-                    color={'#B5E67C'}
-                    fontSize={20}
-                    onPress={() => {
-                      navigation.navigate('roulette')
-                    }}
-                    />
+                 
                 </View>
          
                  <Image
@@ -54,7 +47,7 @@ const Scissor = ({navigation}) => {
   )
 }
 
-export default Scissor
+export default NutMeg
 
 const styles = StyleSheet.create({
     container: {

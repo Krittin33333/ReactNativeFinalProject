@@ -15,12 +15,13 @@ const roulette = ({navigation}) => {
 
               <Text style = {styles.text}>Roulette</Text>
             <Image
-                source={require('E:/reactPro/ReactNativeFinalProject/assets/rollover.jpg')}
+                source={require('E:/reactPro/ReactNativeFinalProject/assets/roulette.jpg')}
                 style={styles.sideMenuProfileIcon}
             />
             <Text style = {styles.textheadData}>ท่าหมุนตัว (roulette)</Text>
             <Text style = {styles.textData}>    หลังจากที่ฝ่ายตรงข้ามกำลังจะจิ้มขาเข้ามาเพื่อแย่งบอลของคุณ เราสามารถที่จะหมุนตัวเพื่อกันและหลบคู่ต่อสู้ได้ ด้วยการดึงบอลกลับถอยหลังด้วยขาข้างใดข้างหนึ่ง ก่อนที่จะใช้อีกข้างเกี่ยวฟุตบอลเอาไว้พร้อมกับหมุนตัวหลบคู่ต่อสู้</Text>
-            <Text style = {styles.textData}>    ท่านี้เป็นหนึ่งท่าไม้ตายที่หลายๆคนใช่ฝึก เพื่อเอาตัวรอดนอกจากจะเท่แล้วยังสามารถ พลิกสถานะการณ์ต่างๆได้หากฝึกอย่างชำนาญแล้ว</Text>
+            <Text style = {styles.textData}>    ท่านี้เป็นหนึ่งท่าไม้ตายที่หลายๆคนใช่ฝึก เพื่อเอาตัวรอดนอกจากจะเท่แล้วยังสามารถ พลิกสถานะการณ์ต่างๆได้หากฝึกอย่างชำนาญแล้ว
+            ซึ่งท่านี้ถ้าฝึกดีๆ มีโอกาศหลังหักแน่นอนเพราะมันเป็นการเปี่ยนทิศทางบอลกระทันหัน</Text>
             <View style = {{flexDirection: "row",justifyContent: 'space-between',marginTop:20}}>
                   <Button
                     title='  Back  '
@@ -35,7 +36,7 @@ const roulette = ({navigation}) => {
                     color={'#B5E67C'}
                     fontSize={20}
                     onPress={() => {
-                      navigation.navigate('stepover')
+                      navigation.navigate('inandout')
                     }}
                     />
                 </View>

@@ -21,6 +21,8 @@ import mf from "./screens/mf";
 import df from "./screens/df";
 import gk from "./screens/gk";
 import roulette from "./screens/roulette";
+import InAndOut from "./screens/InAndOut";
+import NutMeg from "./screens/NutMeg";
 
 
 
@@ -49,6 +51,8 @@ function MyLogin() {
         <Stack.Screen name='rollover' component={RolloverScreen}/>
         <Stack.Screen name='stepover' component={Scissor}/>
         <Stack.Screen name='roulette' component={roulette}/>
+        <Stack.Screen name='inandout' component={InAndOut}/>
+        <Stack.Screen name='nut' component={NutMeg}/>
         <Stack.Screen name='skill' component={SkillScreen}/>
         <Stack.Screen name='fw' component={Forward}/>
         <Stack.Screen name='mf' component={mf}/>

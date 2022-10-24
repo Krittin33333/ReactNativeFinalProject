@@ -1,7 +1,7 @@
-import {  View, Text, Button ,ImageBackground,StyleSheet,Image,ScrollView,SafeAreaView} from 'react-native'
+import { View, Text, Button ,ImageBackground,StyleSheet,Image,ScrollView,SafeAreaView } from 'react-native'
 import React from 'react'
 
-const Scissor = ({navigation}) => {
+const InAndOut = ({navigation}) => {
   return (
     <SafeAreaView>
     <ScrollView>
@@ -13,13 +13,13 @@ const Scissor = ({navigation}) => {
           <View style = {styles.textbox}>
            
 
-              <Text style = {styles.text}>Step Over</Text>
+              <Text style = {styles.text}>In and Out</Text>
             <Image
-                source={require('E:/reactPro/ReactNativeFinalProject/assets/stepover.jpg')}
+                source={require('E:/reactPro/ReactNativeFinalProject/assets/in and out.jpg')}
                 style={styles.sideMenuProfileIcon}
             />
-            <Text style = {styles.textheadData}>สับขาหลอก (step over, scissor)</Text>
-            <Text style = {styles.textData}>    การสับขาหลอกเป็นเทคนิคการเลี้ยงบอลหลบที่ใช้กันอย่างแพร่หลายมาก นักเตะหลายคนก็นิยมท่านี้มาก วิธีการทำนั่นคือเมื่อเลี้ยงบอลเข้าจู่โจมฝ่ายตรงข้ามแล้ว ทำให้การสับขาหลอกด้วยการ ก้าวข้ามบอลเป็นวงกลมสลับไปสลับมา โดยใช้ขาทั้ง 2 ข้าง หรือจะใช้ข้างเดียวก็ได้ เพื่อหลอกให้ฝ่ายตรงข้ามเสียจังหวะ ก่อนที่จะกระชากบอลไปในทิศทางที่เหมาะสมเพื่อหลบคู่ต่อสู้</Text>
+            <Text style = {styles.textheadData}>การเลี้ยงบอลอ้อมตัว (in and out)</Text>
+            <Text style = {styles.textData}>    เป็นท่าที่นิยมใช้กันบ่อยมากในนักเตะที่มีความเร็วและความคล่องตัวสูง เพราะต้องใช้ความเร็วอย่างมากในการเลี้ยงบอลอ้อมตัวผู้เล่น วิธีในการใช้ท่านี้คือเลี้ยงบอลไปยังฝั่งตรงข้ามกันกับที่เราจะวิ่งไปเพื่อลวงให้ฝ่ายตรงข้ามสับสน และในช่วงที่ฝ่ายตรงข้ามกำลังจะก้าวขาแย่งบอล ให้ทำการเตะฟุตบอลไปในทิศทางคนละฝั่งกับขาที่ยื่นออกมา หลังจากเตะแล้วก็ให้วิ่งอ้อมตัวคู่ต่อสู้ไปในทิศตรงข้ามกับลูกบอลก่อนเก็บบอลแล้ววิ่งเลี้ยงบอลต่อไป</Text>
             <View style = {{flexDirection: "row",justifyContent: 'space-between',marginTop:20}}>
                   <Button
                     title='  Back  '
@@ -34,7 +34,7 @@ const Scissor = ({navigation}) => {
                     color={'#B5E67C'}
                     fontSize={20}
                     onPress={() => {
-                      navigation.navigate('roulette')
+                      navigation.navigate('nut')
                     }}
                     />
                 </View>
@@ -54,7 +54,7 @@ const Scissor = ({navigation}) => {
   )
 }
 
-export default Scissor
+export default InAndOut
 
 const styles = StyleSheet.create({
     container: {
